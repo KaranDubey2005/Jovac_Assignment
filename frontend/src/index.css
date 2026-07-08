@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+:root {
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --bg-color: 220 25% 6%;
+  --bg-gradient: linear-gradient(135deg, hsl(220, 25%, 5%), hsl(222, 30%, 10%));
+  --card-bg: rgba(17, 24, 39, 0.6);
+  --card-border: rgba(255, 255, 255, 0.07);
+  --text-primary: 0 0% 95%;
+  --text-secondary: 215 15% 70%;
+  --accent-teal: 180 100% 45%;
+  --accent-purple: 270 100% 65%;
+  --accent-gradient: linear-gradient(90deg, hsl(180, 100%, 45%), hsl(270, 100%, 65%));
+  --shadow-premium: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background: var(--bg-gradient);
+  color: hsl(var(--text-primary));
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--bg-color));
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes glowPulse {
+  0%, 100% { border-color: rgba(255, 255, 255, 0.07); box-shadow: var(--shadow-premium); }
+  50% { border-color: rgba(6, 182, 212, 0.3); box-shadow: 0 0 25px rgba(6, 182, 212, 0.15); }
+}
+@keyframes rotateLoader {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
